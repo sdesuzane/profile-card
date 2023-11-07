@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lilita+One&family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    background-image: linear-gradient(165deg, #708b85 0, #5b7e79 16.67%, #3e6e6a 33.33%, #0f5959 50%, #004549 66.67%, #00353f 83.33%, #002a38 100%);
+}
+
+h1 {
+    margin: 0;
+    font-family: 'EB Garamond', serif;
+}
+
+p {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.p1 {
+    margin: 15px;
+    font-family: 'Satisfy', cursive;
+}
+
+.profile-card {
+    position: relative;
+    height: 500px;
+    width: 450px;
+    gap: 0px;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background: #042326;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.header-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+}
+
+.profile-picture {
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.profile-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(-110px);
+    transition: all 0.7s ease-in-out;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    padding: 30px;
+}
+
+.icons i {
+    font-size: 30px;
+    color: rgb(20, 20, 20);
+    transition: all 0.5s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: scale(0.1 0.1);
+    border-radius: 10px 10px 10px 10px;
+    background: rgba(255, 255, 255, 0.61);
+    color: black;
+}
+
+.profile-card:hover .profile-picture {
+    transform: translate(-150px, -100px);
+    height: 120px;
+    width: 120px;
+    opacity: 0;
+    
+}
+.profile-card:hover .p1 {
+    
+    opacity: 0;
+}
+
+.profile-card:hover .header-section {
+    transform: translate(0px, -120px);
+}
+
+.profile-card:hover .profile-description {
+    opacity: 1;
+}
+
+.icons i:hover {
+    color: #708b85;
+    transform: scale(1.2);
+    animation: shake 0.5s ease-in-out forwards;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(3px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
